@@ -1,9 +1,14 @@
-var base_url = "http://appgenny.com/";
-var base_url_api = "http://api.appgenny.com/api/v1/";
-var get_applicationsetting = "GetApplicationSetting/PakegName?pakgeName=";
-var get_featureApp = "GetFeatureApp/PakegName?pakgeName=";
-var get_app_slider  =  "GetAppSlider/PakegName?pakgeName=";
-var get_all_post = "GetVideo/getAllPost?pakgeName=";
-var get_post_description = "GetPostDiscraption/postId?postId=";
-var get_wallpaper = "GetWallPaper/PakegName?pakgeName=";
-var get_post_by_sub_category = "GetPostBySubCategory?subCateId=";
+var utility = (function() {
+    return {
+     base_url: "http://appgenny.com/",
+     base_url_api: "http://api.appgenny.com/api/v1/",
+     get_application_setting: "GetApplicationSetting/PakegName?pakgeName=",
+     get_feature_App: "GetFeatureApp/PakegName?pakgeName=",
+     get_app_slider: "GetAppSlider/PakegName?pakgeName=",
+     get_all_post: "GetVideo/getAllPost?pakgeName=",
+     get_post_description: "GetPostDiscraption/postId?postId=",
+     get_wallpaper: "GetWallPaper/PakegName?pakgeName=",
+     get_post_by_sub_category: "GetPostBySubCategory?subCateId=",
+    }
+   
+   }());
