@@ -18,8 +18,6 @@ $('#media').on('swipeleft', function(e) {
    $("#left_gallery_image_slider").click();
  
 });
-
-
 function GallerySLider(packegeName) {
   var settings = {
   "async": true,
@@ -33,7 +31,6 @@ function GallerySLider(packegeName) {
 }
 var base_url = "http://appgenny.com/";
 $.ajax(settings).done(function (response) {
- // var $slidergalleryHtml = '';
  var activeClass = '';
  var new_html = '';
  var counter = 0;
