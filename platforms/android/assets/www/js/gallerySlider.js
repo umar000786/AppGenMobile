@@ -18,8 +18,6 @@ $('#media').on('swipeleft', function(e) {
    $("#left_gallery_image_slider").click();
  
 });
-
-
 function GallerySLider(packegeName) {
   var settings = {
   "async": true,
