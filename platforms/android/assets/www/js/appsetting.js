@@ -35,7 +35,6 @@ $.ajax(settings).done(function (response)
     $('.latest-blog').css('display','none');
    
   }
-
   if(row == 1 )
   {
     responseArray.push('s12');
