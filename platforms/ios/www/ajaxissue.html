@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ajax Issue</title>
+	<link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style1.css">
+    <link rel="stylesheet" href="css/loader.css">
+    <style type="text/css">
+      div#error {
+    color: #fff;
+    font-size: 25px;
+    padding: 6%;
+    /* font-size: 72px; */
+    background: -webkit-linear-gradient(#214CD7, #fff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: fantasy;
+    text-align: center;
+  
+}
+    </style>
+</head>
+<body>
+
+<div class="loader"  style="background-color:#214CD7; background-image: url('img/issuespash.png') !important;">
+
+	<div id="error">Slow Internet Connection! <br> Please Wait....</div>
+  
+  <div class="" style="position: absolute;
+    /* height: 97px; */
+    left: 38%;
+    z-index: 999999;">
+  <div class="col-xs-12 col-sm-12">
+    <div style="float: left;">
+    <img class="img-responsive" src="img/loading.gif" style="width: 85px">
+  </div>
+  
+  </div>
+</div>
+</div>
+</body>
+    <script type="text/javascript" src="cordova.js"></script>
+<script src="js/jquery.min.js"></script>
+
+<script type="text/javascript">
+	function checkAjax(pkgname)
+	{
+		var base_url = "http://appgenny.com/";
+var settings = {
+  "async": true,
+  "crossDomain": true,
+  "url": "http://api.appgenny.com/api/vi/GetApplicationSetting/PakegName?pakgeName="+pkgname,
+  "method": "GET",
+  "headers": {
+    "Cache-Control": "no-cache",
+    "Postman-Token": "03ce7257-9417-4006-963b-030143c6cdfe"
+  }
+}
+var rowDisplay = '';
+
+$.ajax(settings).done(function (response)
+{
+
+window.location.href = "index.html";
+}).error(function(error){
+ $('#error').html('Please check Your connectivity. OR May be server issue. <br> Please Wait....')
+ });
+	}
+  
+  function checkAjaxAfterTimePeriod(){
+	cordova.getAppVersion.getPackageName(function(pkgname){
+	checkAjax(pkgname);
+	});
+
+	}
+
+
+setInterval(function(){ checkAjaxAfterTimePeriod() }, 6000);
+
+</script>
+
+</html>
