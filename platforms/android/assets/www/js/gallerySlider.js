@@ -33,7 +33,6 @@ function GallerySLider(packegeName) {
 }
 var base_url = "http://appgenny.com/";
 $.ajax(settings).done(function (response) {
- // var $slidergalleryHtml = '';
  var activeClass = '';
  var new_html = '';
  var counter = 0;
