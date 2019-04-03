@@ -385,7 +385,7 @@ module.exports.wait_for_boot = function (emulator_id, time_remaining) {
  * Returns a promise.
  */
 module.exports.create_image = function (name, target) {
-    console.log('Creating new avd named ' + name);
+    
     if (target) {
         return superspawn.spawn('android', ['create', 'avd', '--name', name, '--target', target]).then(null, function (error) {
             console.error('ERROR : Failed to create emulator image : ');
@@ -393,7 +393,7 @@ module.exports.create_image = function (name, target) {
             console.error(error);
         });
     } else {
-        console.log('WARNING : Project target not found, creating avd with a different target but the project may fail to install.');
+       
         // TODO: there's a more robust method for finding targets in android_sdk.js
         return superspawn.spawn('android', ['create', 'avd', '--name', name, '--target', this.list_targets()[0]]).then(function () {
             // TODO: This seems like another error case, even though it always happens.

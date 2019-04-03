@@ -42,7 +42,6 @@ $.ajax(settings).done(function (response)
   }
   else if(row == 2) {
   responseArray.push('s6');  
- // $('.lazyloadingImagePost').css('min-height' , '150px');
   }
   else if(row == 3) {
  responseArray.push('s4');
@@ -98,7 +97,6 @@ $.ajax(settings).done(function (response)
   responseArray.push(AdMobInterstitialId);
   if(checktitle == true)
   {
-    //alert('asdasd');
    responseArray.push('includeTitle'); 
   }
   else

@@ -40,7 +40,7 @@ module.exports.run = function (args) {
             var manifest = require(manifestFilePath);
             startPage = manifest.start_url;
         } catch (err) {
-            console.log('failed to require manifest ... ' + err);
+           
         }
     }
 
@@ -52,12 +52,11 @@ module.exports.run = function (args) {
                 startPage = 'index.html';
             }
             var projectUrl = url.resolve('http://localhost:' + server.port + '/', startPage);
-            console.log('startPage = ' + startPage);
-            console.log('Static file server running @ ' + projectUrl + '\nCTRL + C to shut down');
+           
             return server.launchBrowser({'target': args.target, 'url': projectUrl});
         })
         .catch(function (error) {
-            console.log(error.message || error.toString());
+            
             if (server.server) {
                 server.server.close();
             }

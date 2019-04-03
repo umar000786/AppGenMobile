@@ -91,7 +91,7 @@ function getyoutubeVideo(keyword, type , limitVideo) {
 		type: "GET",
 		url: url,
 		success: function(response) {
-        	//console.log(response.items);
+        	
         	var items = response.items;
         	var html= '';
         	$.each(items,function(index,item){
@@ -125,12 +125,9 @@ function getyoutubeVideo(keyword, type , limitVideo) {
             $('.my_lazy_loader').hide();
             $('.search_result_h3').html('');
 
-        	//$('#img_link').css('display','none');
-
-
         },
         error: function(response) {
-        	console.log(response);
+        	
         }
     });
 }

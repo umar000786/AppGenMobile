@@ -20,7 +20,6 @@ $.ajax(settings).done(function (response) {
        var items = response.items;
        var html= '';
        
-      console.log(items);
        $.each(items,function(index,item){
         		var vedio_id = item.snippet.resourceId.videoId;
         		var $title = item.snippet.title
@@ -63,7 +62,7 @@ function getyoutubeVideoBySearch(keyword, type , limitVideo) {
 		type: "GET",
 		url: url,
 		success: function(response) {
-        	//console.log(response.items);
+        	
         	var items = response.items;
         	var html= '';
         	$.each(items,function(index,item){
@@ -102,7 +101,7 @@ function getyoutubeVideoBySearch(keyword, type , limitVideo) {
 
         },
         error: function(response) {
-        	console.log(response);
+        
         }
     });
 }
@@ -151,7 +150,7 @@ function getDailymotionBySearch(keyword , limitVideo) {
 		},
 		error: function(response) 
 		{
-			console.log(response);
+			
 		}
 	});
 
@@ -180,8 +179,7 @@ if(admobCheck == 'admobRunning' &&  admobLimit > 0 )
 	admobLimit = response[2];
 	if(counterAds == admobLimit)
 	{
-		console.log('admobLimit'+admobLimit);
-        console.log('counterAds'+counterAds);
+		
 		showIndustrialAdForYoutubeVIdeoPlayer();
 		var videoInfo = [];
 		
@@ -221,7 +219,7 @@ function runVideoPlayer(videoid , platform)
 			}
 			if(platform == 'youtube')
 			{
-				YoutubeVideoPlayer.openVideo(videoid, function(result) { console.log('YoutubeVideoPlayer result = ' + result); });
+				YoutubeVideoPlayer.openVideo(videoid, function(result) {  });
 					
 			}
 		}

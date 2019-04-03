@@ -20,7 +20,7 @@ $.ajax(settings).done(function (response) {
        var items = response.items;
        var html= '';
        
-      console.log(items);
+    
        $.each(items,function(index,item){
         		var vedio_id = item.snippet.resourceId.videoId;
         		var $title = item.snippet.title
@@ -63,7 +63,7 @@ function getyoutubeVideoBySearch(keyword, type , limitVideo) {
 		type: "GET",
 		url: url,
 		success: function(response) {
-        	//console.log(response.items);
+        	
         	var items = response.items;
         	var html= '';
         	$.each(items,function(index,item){
@@ -92,17 +92,17 @@ function getyoutubeVideoBySearch(keyword, type , limitVideo) {
         		html
         	});
         	$('#video_list').html(html);
-        	//$('#search_video_list').html(html);
+        	
         	$('.my_lazy_loader').hide();
         	$('#video_list').css('display','block');
           $('#search_video_list').css('display','block');
 
-        	//$('#img_link').css('display','none');
+        	
 
 
         },
         error: function(response) {
-        	console.log(response);
+        	
         }
     });
 }
@@ -151,7 +151,7 @@ function getDailymotionBySearch(keyword , limitVideo) {
 		},
 		error: function(response) 
 		{
-			console.log(response);
+			
 		}
 	});
 
@@ -180,21 +180,18 @@ if(admobCheck == 'admobRunning' &&  admobLimit > 0 )
 	admobLimit = response[2];
 	if(counterAds == admobLimit)
 	{
-		console.log('admobLimit'+admobLimit);
-        console.log('counterAds'+counterAds);
 		showIndustrialAdForYoutubeVIdeoPlayer();
 		var videoInfo = [];
 		
 		localStorage.setItem("runVideoId",videoid);
 		localStorage.setItem("runVideoplatform",platform);
 		localStorage.setItem("counterAds",'0');
-		//prepareInterstitialAd();
+		
 	}
 	else
 	{
-		//prepareInterstitialAd();
 		runVideoPlayer(videoid , platform);
-	//	initAdmobWithoutBanner();
+	
 }
 
 }
@@ -221,7 +218,7 @@ function runVideoPlayer(videoid , platform)
 			}
 			if(platform == 'youtube')
 			{
-				YoutubeVideoPlayer.openVideo(videoid, function(result) { console.log('YoutubeVideoPlayer result = ' + result); });
+				YoutubeVideoPlayer.openVideo(videoid, function(result) {  });
 					
 			}
 		}

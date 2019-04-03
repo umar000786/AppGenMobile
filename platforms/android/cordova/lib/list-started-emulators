@@ -25,7 +25,7 @@ var emulators = require('./emulator');
 require('./check_reqs').check_android().then(function() {
     emulators.list_started().done(function(emulator_list) {
         emulator_list && emulator_list.forEach(function(emu) {
-            console.log(emu);
+           
         });
     }, function(err) {
         console.error('ERROR: ' + err);

@@ -56,7 +56,7 @@ buildOpts.argv = buildOpts.argv.remain;
 require('./loggingHelper').adjustLoggerLevel(buildOpts);
 
 new Api().build(buildOpts).done(function() {
-        console.log('** BUILD SUCCEEDED **');
+       
     }, function(err) {
         var errorMessage = (err && err.stack) ? err.stack : err;
         console.error(errorMessage);

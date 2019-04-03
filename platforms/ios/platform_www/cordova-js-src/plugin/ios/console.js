@@ -98,7 +98,7 @@ console.assert = function(expression) {
     if (expression) return;
 
     var message = logger.format.apply(logger.format, [].slice.call(arguments, 1));
-    console.log("ASSERT: " + message);
+    
 };
 
 //------------------------------------------------------------------------------
@@ -106,12 +106,12 @@ console.clear = function() {};
 
 //------------------------------------------------------------------------------
 console.dir = function(object) {
-    console.log("%o", object);
+   
 };
 
 //------------------------------------------------------------------------------
 console.dirxml = function(node) {
-    console.log(node.innerHTML);
+    
 };
 
 //------------------------------------------------------------------------------
@@ -140,7 +140,7 @@ console.timeEnd = function(name) {
     }
 
     var timeElapsed = new Date().valueOf() - timeStart;
-    console.log(name + ": " + timeElapsed + "ms");
+    
 };
 
 //------------------------------------------------------------------------------
@@ -160,7 +160,7 @@ console.exception = console.log;
 
 //------------------------------------------------------------------------------
 console.table = function(data, columns) {
-    console.log("%o", data);
+    
 };
 
 //------------------------------------------------------------------------------

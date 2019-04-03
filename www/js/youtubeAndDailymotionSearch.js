@@ -210,7 +210,7 @@ else
 function runVideoPlayer(videoid , platform)
 {
 
-			//$("#videoModal").animate({width:'toggle'},300);
+			
 			if (platform == 'dailymotion') {
 				$('#myModal').css('display', 'none');
 			   $('#videoModal').css('display', 'block');
@@ -221,7 +221,7 @@ function runVideoPlayer(videoid , platform)
 			}
 			if(platform == 'youtube')
 			{
-				YoutubeVideoPlayer.openVideo(videoid, function(result) { console.log('YoutubeVideoPlayer result = ' + result); });
+				YoutubeVideoPlayer.openVideo(videoid, function(result) {  });
 					
 			}
 		}

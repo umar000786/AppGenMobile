@@ -10,5 +10,4 @@ var utility = (function() {
      get_wallpaper: "GetWallPaper/PakegName?pakgeName=",
      get_post_by_sub_category: "GetPostBySubCategory?subCateId=",
     }
-   
    }());

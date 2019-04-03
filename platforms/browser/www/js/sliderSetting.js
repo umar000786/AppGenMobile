@@ -11,7 +11,7 @@ function sliderSettingWithData(pkgname) {
   }
   var base_url = "http://appgenny.com/";
   $.ajax(settings).done(function (response) {
-    console.log(response , 'slider');
+  
    var $sliderHtml = '';
    var activeClass = '';
    $.each( response, function( key, myresponse ) {

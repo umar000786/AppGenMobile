@@ -29,7 +29,7 @@ module.exports = {
     package_name: function (project_dir) {
         // this method should the id from root config.xml => <widget id=xxx
         // return common.package_name(project_dir, this.www_dir(project_dir));
-        // console.log('package_name called with ' + project_dir);
+       
         var pkgName = 'io.cordova.hellocordova';
         var widget_id_regex = /(?:<widget\s+id=['"])(\S+)(?:['"])/;
 
@@ -65,19 +65,18 @@ module.exports = {
         uninstall: function (jsModule, www_dir, plugin_id) {
             var pluginRelativePath = path.join('plugins', plugin_id, jsModule.src);
             // common.removeFileAndParents(www_dir, pluginRelativePath);
-            console.log('js-module uninstall called : ' + pluginRelativePath);
+        
         }
     },
     'source-file': {
         install: function (obj, plugin_dir, project_dir, plugin_id, options) {
             // var dest = path.join(obj.targetDir, path.basename(obj.src));
             // common.copyFile(plugin_dir, obj.src, project_dir, dest);
-            console.log('install called');
+            
         },
         uninstall: function (obj, project_dir, plugin_id, options) {
             // var dest = path.join(obj.targetDir, path.basename(obj.src));
             // common.removeFile(project_dir, dest);
-            console.log('uninstall called');
         }
     },
     'header-file': {

@@ -84,7 +84,7 @@ channel.onCordovaReady.subscribe(function () {
         if (channel.onCordovaConnectionReady.state !== 2) {
             channel.onCordovaConnectionReady.fire();
         }
-        console.log('Error initializing Network Connection: ' + e);
+      
     });
 });
 

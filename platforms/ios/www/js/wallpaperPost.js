@@ -95,7 +95,6 @@ function openModelWallpaper(category_id)
 	var row_id = response[0];
 	//number of rows
 	
-	//$('#wallpaper_url').attr('src',image_url );
 	$('#img_link').css('display','block');
 	$('#video_list').css('display','none');
 	var wallpaperModelhtml= '';
@@ -143,13 +142,6 @@ function openModelWallpaper(category_id)
 
 	});
 	
-
-	
-/*	$('#img_link').css('padding-top','148px');
-	
-$('#myModal .modal-content').css('background-color' , '#000');*/
-
-
 }
 
 function singleModelWallpaper(object)

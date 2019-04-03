@@ -33,7 +33,7 @@ module.exports.isAndroidStudioProject = function isAndroidStudioProject (root) {
     if (!isEclipse) {
         androidStudioFiles.forEach(function (file) {
             if (!fs.existsSync(path.join(root, file))) {
-                console.log('missing file :: ' + file);
+                
                 isAS = false;
             }
         });

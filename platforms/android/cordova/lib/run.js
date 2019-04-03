@@ -119,14 +119,6 @@ module.exports.run = function (runOptions) {
 };
 
 module.exports.help = function () {
-    console.log('Usage: ' + path.relative(process.cwd(), process.argv[1]) + ' [options]');
-    console.log('Build options :');
-    console.log('    --debug : Builds project in debug mode');
-    console.log('    --release : Builds project in release mode');
-    console.log('    --nobuild : Runs the currently built project without recompiling');
-    console.log('Deploy options :');
-    console.log('    --device : Will deploy the built project to a device');
-    console.log('    --emulator : Will deploy the built project to an emulator if one exists');
-    console.log('    --target=<target_id> : Installs to the target with the specified id.');
+   
     process.exit(0);
 };

@@ -206,8 +206,5 @@ if (myresponse.Type == 'WebUrl') {
        $('.my_lazy_loader').hide();
         $(".complete").removeClass( "hide" );  
       }, 6000);
-
-   
   })
-
 }

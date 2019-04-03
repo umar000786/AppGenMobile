@@ -192,7 +192,6 @@ function oneSignalNotification()
 
    },function(err){
       console.log(err);
-      //alert(err);
     },paramkeyArray);
 }
 // featured app model 

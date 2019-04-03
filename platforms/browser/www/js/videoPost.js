@@ -54,7 +54,7 @@ var sum = (x*100 + y*100) / 100;
  var response = JSON.parse((localStorage.getItem("item")));
  var admobCheck = response[7];
  var admobLimit = response[2];
- console.log('admobLimit'+admobLimit);
+
  if(admobCheck == 'admobRunning' &&  admobLimit > 0 )
   {
   var counter = 0;

@@ -22,4 +22,4 @@
 // Coho updates this line:
 var VERSION = "5.0.4";
 
-console.log(VERSION);
+

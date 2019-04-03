@@ -102,6 +102,6 @@ exports.targetForSimIdentifier = function(simIdentifier) {
 // If so, then invoke main method and print out results.
 if (!module.parent) {
     listEmulatorBuildTargets().then(function (targets) {
-        console.log(JSON.stringify(targets, null, 2));
+        
     });
 }

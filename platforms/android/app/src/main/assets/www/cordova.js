@@ -306,8 +306,6 @@ var cordova = {
             }
         } catch (err) {
             var msg = 'Error in ' + (isSuccess ? 'Success' : 'Error') + ' callbackId: ' + callbackId + ' : ' + err;
-            console && console.log && console.log(msg);
-            console && console.log && err.stack && console.log(err.stack);
             cordova.fireWindowEvent('cordovacallbackerror', { 'message': msg });
             throw err;
         }
@@ -317,7 +315,7 @@ var cordova = {
             try {
                 func();
             } catch (e) {
-                console.log('Failed to run constructor: ' + e);
+               
             }
         });
     }
@@ -534,7 +532,7 @@ function clobber (obj, key, value) {
 function assignOrWrapInDeprecateGetter (obj, key, value, message) {
     if (message) {
         utils.defineGetter(obj, key, function () {
-            console.log(message);
+  
             delete obj[key];
             clobber(obj, key, value);
             return value;
@@ -1114,7 +1112,7 @@ function processMessage(message) {
         buildPayload(payload, payloadMessage);
         cordova.callbackFromNative(callbackId, success, status, payload, keepCallback);
     } else {
-        console.log("processMessage failed: invalid message: " + JSON.stringify(message));
+   
     }
 }
 
@@ -1174,7 +1172,7 @@ module.exports = {
 
     // example: cordova.commandProxy.add("Accelerometer",{getCurrentAcceleration: function(successCallback, errorCallback, options) {...},...);
     add: function (id, proxyObj) {
-        console.log('adding proxy for ' + id);
+       
         CommandProxyMap[id] = proxyObj;
         return proxyObj;
     },
@@ -1209,14 +1207,14 @@ var platformInitChannelsArray = [channel.onNativeReady, channel.onPluginsReady];
 function logUnfiredChannels (arr) {
     for (var i = 0; i < arr.length; ++i) {
         if (arr[i].state !== 2) {
-            console.log('Channel not fired: ' + arr[i].type);
+      
         }
     }
 }
 
 window.setTimeout(function () {
     if (channel.onDeviceReady.state !== 2) {
-        console.log('deviceready has not fired after 5 seconds.');
+       
         logUnfiredChannels(platformInitChannelsArray);
         logUnfiredChannels(channel.deviceReadyChannelsArray);
     }
@@ -1338,14 +1336,14 @@ cordova.exec = require('cordova/exec');
 function logUnfiredChannels (arr) {
     for (var i = 0; i < arr.length; ++i) {
         if (arr[i].state !== 2) {
-            console.log('Channel not fired: ' + arr[i].type);
+      
         }
     }
 }
 
 window.setTimeout(function () {
     if (channel.onDeviceReady.state !== 2) {
-        console.log('deviceready has not fired after 5 seconds.');
+       
         logUnfiredChannels(platformInitChannelsArray);
         logUnfiredChannels(channel.deviceReadyChannelsArray);
     }
@@ -1942,7 +1940,7 @@ function findCordovaPath () {
 exports.load = function (callback) {
     var pathPrefix = findCordovaPath();
     if (pathPrefix === null) {
-        console.log('Could not find cordova.js script tag. Plugin loading may fail.');
+        
         pathPrefix = '';
     }
     injectIfNecessary('cordova/plugin_list', pathPrefix + 'cordova_plugins.js', function () {
@@ -2175,7 +2173,7 @@ utils.alert = function (msg) {
     if (window.alert) {
         window.alert(msg);
     } else if (console && console.log) {
-        console.log(msg);
+      
     }
 };
 
