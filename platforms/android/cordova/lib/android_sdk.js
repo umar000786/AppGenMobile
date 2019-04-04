@@ -46,7 +46,7 @@ function sort_by_largest_numerical_suffix (a, b) {
 module.exports.print_newest_available_sdk_target = function () {
     return module.exports.list_targets().then(function (targets) {
         targets.sort(sort_by_largest_numerical_suffix);
-        console.log(targets[0]);
+     
     });
 };
 

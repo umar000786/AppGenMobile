@@ -112,14 +112,13 @@ Api.createPlatform = function (dest, config, options, events) {
 };
 
 Api.updatePlatform = function (dest, options, events) {
-    // console.log("test-platform:Api:updatePlatform");
+    
     // todo?: create projectInstance and fulfill promise with it.
     return Promise.resolve();
 };
 
 Api.prototype.getPlatformInfo = function () {
-    // console.log("browser-platform:Api:getPlatformInfo");
-    // return PlatformInfo object
+   
     return {
         'locations': this.locations,
         'root': this.root,
@@ -261,7 +260,7 @@ Api.prototype.prepare = function (cordovaProject, options) {
 
 Api.prototype.addPlugin = function (pluginInfo, installOptions) {
 
-    // console.log(new Error().stack);
+   
     if (!pluginInfo) {
         return Promise.reject(new Error('The parameter is incorrect. The first parameter ' +
             'should be valid PluginInfo instance'));
@@ -316,8 +315,7 @@ Api.prototype.addPlugin = function (pluginInfo, installOptions) {
 };
 
 Api.prototype.removePlugin = function (plugin, uninstallOptions) {
-    // console.log("NotImplemented :: browser-platform:Api:removePlugin ",plugin, uninstallOptions);
-
+  
     uninstallOptions = uninstallOptions || {};
     // CB-10108 platformVersion option is required for proper plugin installation
     uninstallOptions.platformVersion = uninstallOptions.platformVersion ||
@@ -367,8 +365,7 @@ Api.prototype._getInstaller = function (type) {
         var installer = self._handler[type];
 
         if (!installer) {
-            console.log('unrecognized type ' + type);
-
+           
         } else {
             var wwwDest = options.usePlatformWww ?
                 self.getPlatformInfo().locations.platformWww :
@@ -391,8 +388,7 @@ Api.prototype._getUninstaller = function (type) {
         var installer = self._handler[type];
 
         if (!installer) {
-            console.log('browser plugin uninstall: unrecognized type, skipping : ' + type);
-
+          
         } else {
             var wwwDest = options.usePlatformWww ?
                 self.getPlatformInfo().locations.platformWww :

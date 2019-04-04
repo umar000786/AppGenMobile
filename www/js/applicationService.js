@@ -1,56 +1,35 @@
 var applicationService = (function () {
 	return {
 		getApplicationSetting: function (item) {
-			var response = request.sendGetRequest(utility.get_application_setting, item, utility.base_url_api)
-			response.done(function (data) {
-				return data;
-			});
+			return $.when(request.sendGetRequest(utility.get_application_setting, item, utility.base_url_api));
 		},
 
 		getApplicationFeature: function (item) {
-			var response = request.sendGetRequest(utility.get_feature_App, item, utility.base_url_api)
-			response.done(function (data) {
-				return data;
-			});
+			return $.when(request.sendGetRequest(utility.get_feature_App, item, utility.base_url_api));	
 		},
 
 		getApplicationCarousel: function (item) {
-			var response = request.sendGetRequest(utility.get_app_slider, item, utility.base_url_api)
-			response.done(function (data) {
-				return data;
-			});
+			return $.when(request.sendGetRequest(utility.get_app_slider, item, utility.base_url_api));
 		},
 
 		getApplicationPost: function (item) {
-			var response = request.sendGetRequest(utility.get_all_post, item, utility.base_url_api)
-			response.done(function (data) {
-				return data;
-			});
+			return $.when(request.sendGetRequest(utility.get_all_post, item, utility.base_url_api));	
 		},
 
 		getApplicationPostDescription: function (item) {
-			var response = request.sendGetRequest(utility.get_post_description, item, utility.base_url_api)
-			response.done(function (data) {
-				return data;
-			});
+			return $.when(request.sendGetRequest(utility.get_post_description, item, utility.base_url_api));
 		},
 
 		getApplicationgWallpaper: function (item) {
-			var response = request.sendGetRequest(utility.get_wallpaper, item, utility.base_url_api)
-			response.done(function (data) {
-				return data;
-			});
+			return $.when( request.sendGetRequest(utility.get_wallpaper, item, utility.base_url_api))
 		},
 
 		getApplicationPostByCategory: function (item) {
-			var response = request.sendGetRequest(utility.get_post_by_sub_category, item, utility.base_url_api)
-			response.done(function (data) {
-				return data;
-			});
+			return $.when( request.sendGetRequest(utility.get_post_by_sub_category, item, utility.base_url_api))
 		},
 	}
-
 }());
+
 
 $(function () {
 	$.ajaxSetup({

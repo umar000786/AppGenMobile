@@ -1,18 +1,10 @@
 $(document).ready(function(){
-//cordova.getAppVersion.getPackageName(function(pkgname){
 GallerySLider('com.oneapp.quransharif'); 
 });
-//});
-/*
-setInterval(function(){ 
-   $("#right_gallery_image_slider").click();
-
-},10000); */
 
 $('#media').on('swipeleft', function(e) {
      $("#right_gallery_image_slider").click();
- 
-  //slides.eq(i + 1).addClass('active');
+
 })
   $('#media').on('swiperight', function(e) {
    $("#left_gallery_image_slider").click();
@@ -33,7 +25,6 @@ function GallerySLider(packegeName) {
 }
 var base_url = "http://appgenny.com/";
 $.ajax(settings).done(function (response) {
- // var $slidergalleryHtml = '';
  var activeClass = '';
  var new_html = '';
  var counter = 0;
@@ -52,8 +43,7 @@ $.ajax(settings).done(function (response) {
     }
     if (myresponse.Active== true && myresponse.Type != 'Slider') {
   if(counter % 3 == 0 && counter != 0 ){
-             //console.log(key);
-             
+          
       new_html += '</div></div>\
             <div class="item '+activeClass+'">\
                   <div class="row">';
@@ -94,8 +84,6 @@ if (myresponse.Type == 'Redirect') {
 }
 counter++;
 });
-  // console.log($slidergalleryHtml);
-  
 $('#media .carousel-inner').html(new_html);
  });
   // body...

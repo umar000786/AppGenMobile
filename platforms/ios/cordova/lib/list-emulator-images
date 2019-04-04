@@ -41,7 +41,7 @@ exports.run = listEmulatorImages;
 if (!module.parent) {
     listEmulatorImages().then(function (names) {
         names.forEach(function (name) {
-            console.log(name);
+            
         });
     });
 }

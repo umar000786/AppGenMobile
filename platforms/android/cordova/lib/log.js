@@ -36,7 +36,7 @@ module.exports.run = function () {
     adb.stdout.on('data', function (data) {
         var lines = data ? data.toString().split('\n') : [];
         var out = lines.filter(function (x) { return x.indexOf('nativeGetEnabledTags') < 0; });
-        console.log(out.join('\n'));
+        
     });
 
     adb.stderr.on('data', console.error);
@@ -50,7 +50,5 @@ module.exports.run = function () {
 };
 
 module.exports.help = function () {
-    console.log('Usage: ' + path.relative(process.cwd(), path.join(ROOT, 'cordova', 'log')));
-    console.log('Gives the logcat output on the command line.');
     process.exit(0);
 };

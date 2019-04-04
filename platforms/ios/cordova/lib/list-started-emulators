@@ -44,7 +44,7 @@ exports.run = listStartedEmulators;
 if (!module.parent) {
     listStartedEmulators().then(function (emulators) {
         emulators.forEach(function (emulator) {
-            console.log(emulator);
+        
         });
     });
 }

@@ -24,7 +24,7 @@ var path  = require('path');
 var nopt = require('nopt');
 
 if(['--help', '/?', '-h', 'help', '-help', '/help'].indexOf(process.argv[2]) >= 0) {
-    console.log('Cleans the project directory.');
+   
     process.exit(0);
 }
 
@@ -43,7 +43,7 @@ opts.noPrepare = true;
 require('./loggingHelper').adjustLoggerLevel(opts);
 
 new Api().clean(opts).done(function() {
-    console.log('** CLEAN SUCCEEDED **');
+    
 }, function(err) {
     console.error(err);
     process.exit(2);

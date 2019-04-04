@@ -54,13 +54,12 @@ function openWallpaper(object)
 	var category_id = $(object).attr('category_id');
 	var y = localStorage.getItem("counterAds");
 	var x  = 1;
-//sum += countAds;
 var sum = (x*100 + y*100) / 100;
 localStorage.setItem("counterAds",sum);
 var response = JSON.parse((localStorage.getItem("item")));
 var admobCheck = response[7];
 var admobLimit = response[2];
-console.log('admobLimit'+admobLimit);
+
 if(admobCheck == 'admobRunning' &&  admobLimit > 0 )
 {
 	var counter = 0;
@@ -93,9 +92,8 @@ function openModelWallpaper(category_id)
 	//number of rows
 	var response=JSON.parse((localStorage.getItem("item")));
 	var row_id = response[0];
-	//number of rows
+	//number of rows	
 	
-	//$('#wallpaper_url').attr('src',image_url );
 	$('#img_link').css('display','block');
 	$('#video_list').css('display','none');
 	var wallpaperModelhtml= '';
@@ -142,14 +140,6 @@ function openModelWallpaper(category_id)
 		$("#myModal").toggle("slide", {direction:'right'} , '100');
 
 	});
-	
-
-	
-/*	$('#img_link').css('padding-top','148px');
-	
-$('#myModal .modal-content').css('background-color' , '#000');*/
-
-
 }
 
 function singleModelWallpaper(object)
@@ -178,7 +168,7 @@ $('.closewallpaper').click(function(){
 function downloadImg(object)
 {
 	var webLink = $(object).attr('link');
-//alert(link);
+
 window.imagedownloader.download(webLink ,
 	function successFn() {
 		alert('Your Image Has been Saved in your gallery');
@@ -190,17 +180,4 @@ window.imagedownloader.download(webLink ,
 
 }
 
-//wallpaper post end
-
-/*var img = document.getElementById('myImg');
-var modalImg = document.getElementById("img01");
-var captionText = document.getElementById("caption");
-img.onclick = function(){
-    modal.style.display = "block";
-    modalImg.src = this.src;
-    captionText.innerHTML = this.alt;
-}
-
-
-*/
 

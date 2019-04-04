@@ -20,7 +20,7 @@ cordova.define("cordova-plugin-statusbar.StatusBarProxy", function(require, expo
 
 function notSupported(win,fail) {
     //
-    console.log('StatusBar is not supported');
+  
     setTimeout(function(){
         if (win) {
             win();

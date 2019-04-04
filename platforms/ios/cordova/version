@@ -31,5 +31,5 @@ var VERSION="4.5.5";
 module.exports.version = VERSION;
 
 if (!module.parent) {
-    console.log(VERSION);
+    
 }

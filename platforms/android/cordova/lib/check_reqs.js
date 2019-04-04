@@ -92,9 +92,7 @@ module.exports.get_gradle_wrapper = function () {
     if (module.exports.isWindows()) {
 
         var result = child_process.spawnSync(path.join(__dirname, 'getASPath.bat'));
-        // console.log('result.stdout =' + result.stdout.toString());
-        // console.log('result.stderr =' + result.stderr.toString());
-
+        
         if (result.stderr.toString().length > 0) {
             var androidPath = path.join(process.env['ProgramFiles'], 'Android') + '/';
             if (fs.existsSync(androidPath)) {
@@ -107,9 +105,7 @@ module.exports.get_gradle_wrapper = function () {
                 }
             }
         } else {
-            // console.log('got android studio path from registry');
-            // remove the (os independent) new line char at the end of stdout
-            // add gradle to match the above.
+            
             androidStudioPath = path.join(result.stdout.toString().split('\r\n')[0], 'gradle');
         }
     }
@@ -355,9 +351,7 @@ module.exports.check_android_target = function (originalError) {
 // Returns a promise.
 module.exports.run = function () {
     return Q.all([this.check_java(), this.check_android()]).then(function (values) {
-        console.log('ANDROID_HOME=' + process.env['ANDROID_HOME']);
-        console.log('JAVA_HOME=' + process.env['JAVA_HOME']);
-
+       
         if (!String(values[0]).startsWith('1.8.')) {
             throw new CordovaError('Requirements check failed for JDK 1.8');
         }

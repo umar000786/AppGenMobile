@@ -53,7 +53,7 @@ browser_parser.prototype.cordovajs_path = function (libDir) {
 };
 
 browser_parser.prototype.cordovajs_src_path = function (libDir) {
-    // console.log("cordovajs_src_path");
+    
     var jsPath = path.join(libDir, 'cordova-js-src');
     return path.resolve(jsPath);
 };
@@ -90,7 +90,7 @@ browser_parser.prototype.update_www = function (cordovaProject, opts) {
 };
 
 browser_parser.prototype.update_overrides = function () {
-    // console.log("update_overrides");
+    
 
     // TODO: ?
     // var projectRoot = util.isCordova(this.path);
@@ -107,7 +107,7 @@ browser_parser.prototype.config_xml = function () {
 
 // Returns a promise.
 browser_parser.prototype.update_project = function (cfg) {
-    // console.log("update_project ",cfg);
+    
     var defer = this.update_from_config();
     var self = this;
     var www_dir = self.www_dir();

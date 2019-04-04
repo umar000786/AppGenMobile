@@ -18,7 +18,7 @@ var app = {
         StatusBar.hide();
         mainarea();
         oneSignalNotification();
-        console.log('Received Event: ' + id);
+       
 
 }
 };

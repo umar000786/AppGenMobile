@@ -28,7 +28,7 @@ var path = require('path'),
 if ( args.length > 2
    || args[2] == '--help' || args[2] == '/?' || args[2] == '-h' ||
                     args[2] == 'help' || args[2] == '-help' || args[2] == '/help') {
-    console.log('Usage: ' + path.relative(process.cwd(), path.join(__dirname, 'clean')) );
+    
     process.exit(0);
 } else {
     clean.run();

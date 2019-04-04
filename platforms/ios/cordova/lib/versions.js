@@ -43,7 +43,7 @@ exports.get_apple_ios_version = function () {
             }
         }
         versions.sort();
-        console.log(versions[0]);
+        
         return Q();
     }, function (stderr) {
         return Q.reject(stderr);
@@ -71,7 +71,7 @@ exports.get_apple_osx_version = function () {
             }
         }
         versions.sort();
-        console.log(versions[0]);
+        
         return Q();
     }, function (stderr) {
         return Q.reject(stderr);

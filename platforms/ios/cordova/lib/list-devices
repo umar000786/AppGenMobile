@@ -61,7 +61,7 @@ exports.run = listDevices;
 if (!module.parent) {
     listDevices().then(function (devices) {
         devices.forEach(function (device) {
-            console.log(device);
+           
         });
     });
 }
