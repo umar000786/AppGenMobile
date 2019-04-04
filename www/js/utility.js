@@ -11,3 +11,4 @@ var utility = (function() {
      get_post_by_sub_category: "GetPostBySubCategory?subCateId=",
     }
    }());
+   
