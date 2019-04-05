@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?> 
-<widget id="com.timesvideo.filmigaane" version="1.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0"> 
-<name>Filmi Gaane Old </name> 
+<widget id="com.timevideos.hindioldsongs" version="1.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0"> 
+<name>Hindi Old Songs Video - Hindi Old Classic Songs</name> 
  <author email="umardraz651@gmail.com" href="http://cordova.io">umar draz</author> 
  <icon src="www/img/icon.png" /> 
  <content src="index.html" /> 
@@ -33,10 +33,10 @@
    <preference name="android-targetSdkVersion" value="26" /> 
    <preference name="android-build-tool" value="gradle" /> 
    <preference name="StatusBarOverlaysWebView" value="true" /> 
-<preference name="onesignal" value="" />
-<preference name="admobBannerId" value="ca-app-pub-2607313420010336/5371692162" />
-<preference name="admobInterstitialId" value="ca-app-pub-2607313420010336/2362385448" />
-<preference name="admobAppId" value="ca-app-pub-2607313420010336~8189427197" />
+<preference name="onesignal" value="f9f276b1-bd21-4470-a4bb-0fe1685f359d" />
+<preference name="admobBannerId" value="ca-app-pub-8633669327040391/6749033889" />
+<preference name="admobInterstitialId" value="ca-app-pub-8633669327040391/3931298852" />
+<preference name="admobAppId" value="ca-app-pub-8633669327040391~2818717102" />
 <preference name="SplashScreenDelay" value="4000" /> 
 <preference name="SplashMaintainAspectRatio" value="true" /> 
 <preference name="ShowSplashScreenSpinner" value="false" /> 
