@@ -1,9 +1,9 @@
 {
   "background_color": "#FFF",
   "display": "standalone",
-  "name": "Sadabahar Hindi Songs",
-  "short_name": "Sadabahar Hindi Songs",
-  "version": "com.timevideos.oldhindisongs",
+  "name": "Filmi Gaane Old",
+  "short_name": "Filmi Gaane Old",
+  "version": "com.timesvideo.filmigaane",
   "author": "umar draz",
   "icons": [
     {
